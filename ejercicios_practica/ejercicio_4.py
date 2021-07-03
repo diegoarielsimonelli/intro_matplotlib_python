@@ -23,7 +23,7 @@ if __name__ == '__main__':
     # intervalor de valores de "X":
     x = np.linspace(-10, 10, 40)
 
-    # Realizar tres gráficos que representen
+    # Realizar 4 gráficos que representen
     # y1 = x^2 (X al cuadrado)
     # y2 = x^3 (X al cubo)
     # y3 = x^4 (X a la cuarta)
@@ -35,8 +35,8 @@ if __name__ == '__main__':
     y3 = x**4
     y4 = np.sqrt(x)
 
-    # Esos tres gráficos deben estar colocados
-    # en la diposición de 3 filas y 1 columna:
+    # Esos 4 gráficos deben estar colocados
+    # en la diposición de 2 filas y 2 columnas:
     # ------
     #  graf1 | graf2
     # ------
@@ -53,5 +53,33 @@ if __name__ == '__main__':
     # Colocar una grilla a elección
 
     # Crear acá su gráfico
+    fig = plt.figure()
+    
+    ax1 = fig.add_subplot(2,2,1)
+    ax2 = fig.add_subplot(2,2,2)
+    ax3 = fig.add_subplot(2,2,3)
+    ax4 = fig.add_subplot(2,2,4)
 
+    ax1.plot(x, y1, color='darkblue', marker='1', label='y1 = x^2')
+    ax2.plot(x, y2, color='r', marker='o', label='y2 = x^3')
+    ax3.plot(x, y3, color='black', marker='^', label='y3 = x^4')
+    ax4.plot(x, y4, color='navy', marker='v', label='y4 = raiz_cuadrada(X)')
+
+    ax1.set_facecolor('pink')
+    ax2.set_facecolor('pink')
+    ax3.set_facecolor('pink')
+    ax4.set_facecolor('pink')
+
+
+    ax1.grid(linestyle='dotted')
+    ax2.grid(linestyle='dashed')
+    ax3.grid(linestyle='solid')
+    ax4.grid(linestyle='dashdot')
+
+    ax1.legend(loc='upper center')
+    ax2.legend(loc='upper center')
+    ax3.legend(loc='upper center')
+    ax4.legend(loc='upper center')
+
+    plt.show()
     print("terminamos")

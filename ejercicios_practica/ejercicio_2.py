@@ -45,5 +45,23 @@ if __name__ == '__main__':
     # a su elección
 
     # Crear acá su gráfico
+    fig = plt.figure()
 
+    ax1 = fig.add_subplot(1,2,1)
+    ax2 = fig.add_subplot(1,2,2)
+
+    ax1.plot(x,y1, color='cyan', marker='o', label='y1 = x**2')
+    ax2.plot(x,y2, color='darkblue', marker='v', label='y2 = x*3')
+
+    ax1.set_facecolor('pink')
+    ax2.set_facecolor('pink')
+
+    ax1.set_title('GRAFICO N°1')
+    ax2.set_title('GRAFICO N°2')
+
+    ax1.legend(loc='upper center')
+    ax2.legend(loc='upper center')
+
+
+    plt.show()
     print("terminamos")

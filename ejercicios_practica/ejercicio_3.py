@@ -33,5 +33,17 @@ if __name__ == '__main__':
     # Elegir un marker a elección
 
     # Crear acá su gráfico
+    fig = plt.figure()
 
+    ax = fig.add_subplot()
+
+    ax.scatter(x,y, c='darkblue', marker='o', label='y = tanh(x)')
+    ax.set_facecolor('pink')
+
+    ax.set_ylabel('Eje Y')
+    ax.set_xlabel('Eje X')
+
+    ax.legend(loc='upper center')
+
+    plt.show()
     print("terminamos")

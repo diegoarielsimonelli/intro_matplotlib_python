@@ -12,6 +12,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
+
+
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     print("Line Plot")
@@ -38,4 +40,23 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
-    print("terminamos")
+    
+  
+
+    fig =  plt.figure()
+    ax = fig.add_subplot()
+    ax.plot(x,y, marker='o', ls='--', label='y = x**2', color='r')
+    ax.set_facecolor('pink')
+    ax.set_title(' Grafico N°1')
+    ax.set_ylabel('Eje Y')
+    ax.set_xlabel('Eje X')
+
+    
+    
+    plt.show()
+    
+
+           
+    
+print("terminamos")
+
